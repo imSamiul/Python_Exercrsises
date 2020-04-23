@@ -31,16 +31,26 @@ while i <= 5:
             x = input("What do you want for lock?\n"
                       "1 for 'Diet'\n"
                       "2 for 'Exercise\n")
-            if x == "1":
-                v = diet()
-                with open("Jubayer.txt", "a") as f:
-                    a = "[" + getdate() + "]" + " " + v + "\n"
-                    f.write(a)
-            elif x == "2":
-                exercise()
-            else:
-                print(f' You have {5 - j} term left')
-                j = j + 1
+            while True:
+                if x == "1":
+                    v = diet()
+                    with open("Jubayer.txt", "a") as f:
+                        a = "[" + getdate() + "]" + " " + v + "\n"
+                        f.write(a)
+                    z = input("Do you want to add more?\n"
+                              "1 to yes\n"
+                              "2 to no\n")
+                    if z == "1":
+                        v
+                    else:
+                        print("Thank you.")
+                elif x == "2":
+                    exercise()
+                else:
+                    print(f' You have {5 - j} term left')
+                    j = j + 1
+
+                break
         break
     else:
         print(f'You Failed!😒\n'
